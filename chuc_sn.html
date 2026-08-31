@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Thảo 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Mali:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/birthday.css">
+    <!-- Thư viện Canvas Confetti để bắn pháo giấy -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="./audio/happy_birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Màn 1: Hộp quà bí mật -->
+    <div id="screen-1" class="screen active">
+        <div class="gift-wrapper" onclick="openGift()">
+            <div class="huge-icon">🎁</div>
+            <p class="click-text">Nhấn vào để mở quà nhé Thảo thối! ✨</p>
+        </div>
+    </div>
+
+    <!-- Màn 2: Bánh Sinh Nhật -->
+    <div id="screen-2" class="screen">
+        <div class="cake-container">
+            <h2 class="title">Thổi nến đi cục cưng ơi!</h2>
+            <div class="gift-wrapper" onclick="blowCandles()">
+                <div class="huge-icon" style="position: relative;">
+                    🎂
+                </div>
+            </div>
+            <p class="click-text" style="background:none; box-shadow:none; font-size:1.2rem;">(Nhấn vào chiếc bánh để thổi nến nhé)</p>
+        </div>
+    </div>
+
+    <!-- Màn 3: Ảnh và Lời Chúc -->
+    <div id="screen-3" class="screen">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slide active">
+                    <img src="./images/1.JPG" alt="Ảnh 1">
+                </div>
+                <div class="slide">
+                    <img src="./images/2.JPG" alt="Ảnh 2">
+                </div>
+                <div class="slide">
+                    <img src="./images/5.jpg" alt="Ảnh 5">
+                </div>
+                <div class="slide">
+                    <img src="./images/7.jpg" alt="Ảnh 7">
+                </div>
+                <div class="slide">
+                    <img src="./images/8.jpg" alt="Ảnh 8">
+                </div>
+            </div>
+            
+            <div class="caption-container">
+                <p class="caption" id="slide-caption">Nụ cười làm tim anh xao xuyến rộn ràng... 💖</p>
+            </div>
+            
+            <div class="controls">
+                <button onclick="prevSlide()">❮</button>
+                <button onclick="nextSlide()">❯</button>
+            </div>
+        </div>
+
+        <div class="message-container">
+            <h1 class="main-title">Chúc Mừng Sinh Nhật Thảo thối của Hiển! 🎉</h1>
+            <p id="typewriter" class="message-text"></p>
+        </div>
+    </div>
+
+    <script src="./js/birthday.js"></script>
+</body>
+</html>
